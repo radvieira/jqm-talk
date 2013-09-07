@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Repos</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div data-role="page">
+        <div data-role="header">
+            <h1>Repositories</h1>
+        </div>
+
+        <div data-role="content">
+            <ul>
+                <% repos.forEach(function(repo) { %>
+                    <li>
+                        <a href="repo/<%= repo.name %>?full_name=<%= repo.full_name %>"><%= repo.name %></a>
+                    </li>
+                <% }) %>
+            </ul>
+        </div>
+
+    </div>
+  </body>
+</html>

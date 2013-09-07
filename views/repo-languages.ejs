@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Repo Languages</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div data-role="page">
+        <div data-role="header">
+            <h1><%= repoName %></h1>
+        </div>
+
+        <div data-role="content">
+        <% Object.keys(languages).forEach(function(el) { %>
+
+            <div>
+                <%= el %> : <%= languages[el] %>
+            </div>
+
+        <% }) %>
+        </div>
+
+    </div>
+  </body>
+</html>
