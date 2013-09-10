@@ -11,13 +11,14 @@
         </div>
 
         <div data-role="content">
-        <% Object.keys(languages).forEach(function(el) { %>
+            <h2>Languages</h2>
 
-            <div>
-                <%= el %> : <%= languages[el] %>
-            </div>
+            <% Object.keys(languages).forEach(function(el) { %>
+                <div>
+                    <strong><%= el %> :</strong><%= languages[el] %>
+                </div>
+            <% }) %>
 
-        <% }) %>
         </div>
 
     </div>
