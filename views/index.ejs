@@ -2,24 +2,25 @@
 <html>
   <head>
     <title>Repos</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.css" />
+      <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+      <script src="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.js"></script>
   </head>
   <body>
     <div data-role="page">
         <div data-role="header">
             <h1>Repositories</h1>
         </div>
-
         <div data-role="content">
-            <ul>
+            <ul data-role="listview">
                 <% repos.forEach(function(repo) { %>
                     <li>
-                        <a href="repo/<%= repo.name %>?full_name=<%= repo.full_name %>"><%= repo.name %></a>
+                        <a data-transition="slide" href="repo/<%= repo.name %>?full_name=<%= repo.full_name %>"><%= repo.name %></a>
                     </li>
                 <% }) %>
             </ul>
         </div>
-
     </div>
   </body>
 </html>
